@@ -1,0 +1,74 @@
+Assembly FigureCenter_Lib, Version=1.0.*, Culture=Инвариантный язык (Инвариантная страна): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=SHA1, flags=None
+Assembly System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=SHA1, flags=None
+Assembly System.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=SHA1, flags=None
+Assembly System.Xml, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=SHA1, flags=None
+Assembly System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a: 
+	hash=SHA1, flags=None
+Assembly Microsoft.VisualC, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a: 
+	hash=SHA1, flags=None
+Class FigureCenter.Figure: AutoLayout, AnsiClass, Class, Public, Abstract, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Int32 Y    'get set' : 
+    Int32 X    'get set' : 
+  Methods:
+    Draw(Graphics, Pen): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Scale(Single): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    MoveTo(Int32, Int32): PrivateScope, Public, HideBySig
+    GetArea(): PrivateScope, Public, HideBySig
+    IsPoint(Int32, Int32): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    IsPoint(Point): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    get_X(): PrivateScope, Public, HideBySig, SpecialName
+    set_X(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_Y(): PrivateScope, Public, HideBySig, SpecialName
+    set_Y(Int32): PrivateScope, Public, HideBySig, SpecialName
+Class FigureCenter.Triangle: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :FigureCenter.Figure
+    Void .ctor(Int32, Int32, Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Int32 Length 'get set' : 
+  Methods:
+    Draw(Graphics, Pen): PrivateScope, Public, Virtual, HideBySig
+    Scale(Single): PrivateScope, Public, Virtual, HideBySig
+    get_Length(): PrivateScope, Public, HideBySig, SpecialName
+    set_Length(Int32): PrivateScope, Public, HideBySig, SpecialName
+    IsPoint(Int32, Int32): PrivateScope, Public, Virtual, HideBySig
+    IsPoint(Point): PrivateScope, Public, Virtual, HideBySig
+Class FigureCenter.Circle: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :FigureCenter.Figure
+    Void .ctor(Int32, Int32, Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Int32 Radius 'get set' : 
+  Methods:
+    Draw(Graphics, Pen): PrivateScope, Public, Virtual, HideBySig
+    Scale(Single): PrivateScope, Public, Virtual, HideBySig
+    get_Radius(): PrivateScope, Public, HideBySig, SpecialName
+    set_Radius(Int32): PrivateScope, Public, HideBySig, SpecialName
+    GetArea(): PrivateScope, Public, HideBySig
+    IsPoint(Int32, Int32): PrivateScope, Public, Virtual, HideBySig
+    IsPoint(Point): PrivateScope, Public, Virtual, HideBySig
+Class FigureCenter.Rectangle: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :FigureCenter.Figure
+    Void .ctor(Int32, Int32, Int32, Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Int32 Height 'get set' : 
+    Int32 Width 'get set' : 
+  Methods:
+    Draw(Graphics, Pen): PrivateScope, Public, Virtual, HideBySig
+    Scale(Single): PrivateScope, Public, Virtual, HideBySig
+    GetArea(): PrivateScope, Public, HideBySig
+    IsPoint(Int32, Int32): PrivateScope, Public, Virtual, HideBySig
+    IsPoint(Point): PrivateScope, Public, Virtual, HideBySig
+    get_Width(): PrivateScope, Public, HideBySig, SpecialName
+    set_Width(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_Height(): PrivateScope, Public, HideBySig, SpecialName
+    set_Height(Int32): PrivateScope, Public, HideBySig, SpecialName
